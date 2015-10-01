@@ -136,7 +136,7 @@ public class GoogleMapActivity extends FragmentActivity implements
     public void onConnected(Bundle bundle) {
         Log.d(TAG,"Inside onConnected");
         Location location = LocationServices.FusedLocationApi.getLastLocation(mGoogleApiClient);
-       
+
         if (location == null) {
             LocationServices.FusedLocationApi.requestLocationUpdates(mGoogleApiClient, mLocationRequest, this);
         }
